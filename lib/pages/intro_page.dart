@@ -16,7 +16,9 @@ class IntroPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const SizedBox(height: 25,),
+            const SizedBox(
+              height: 25,
+            ),
             //shop name
             Text(
               'Sushi Store',
@@ -26,15 +28,19 @@ class IntroPage extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            const SizedBox(height: 25,),
+            const SizedBox(
+              height: 25,
+            ),
             //icon
             Padding(
               padding: const EdgeInsets.all(50.0),
               child: Image.asset('lib/images/sushi.png'),
             ),
-            
+
             //title
-            const SizedBox(height: 25,),
+            const SizedBox(
+              height: 25,
+            ),
             Text(
               'The Taste of Japanese Food',
               style: GoogleFonts.dmSerifDisplay(
@@ -42,25 +48,31 @@ class IntroPage extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-        
-        const SizedBox(height: 10,), 
+
+            const SizedBox(
+              height: 10,
+            ),
             //subtitle
-        Text(
-          'We deliver the freshest sushi to your doorstep. Order now and enjoy the best sushi in town.',
-          style: TextStyle(
-            height: 2,
-            color: Colors.grey[300],
-          ),
-        ),
+            Text(
+              'We deliver the freshest sushi to your doorstep. Order now and enjoy the best sushi in town.',
+              style: TextStyle(
+                height: 2,
+                color: Colors.grey[300],
+              ),
+            ),
 
-        //getstarted button
-        const SizedBox(height: 25,),
+            //getstarted button
+            const SizedBox(
+              height: 25,
+            ),
 
-        CustomButton(text:'Get Started',
-        onTap: () => Navigator.pushNamed(context, 'menupage'),
-        ),
-
-            ],
+            CustomButton(
+              text: 'Get Started',
+              onTap: () {
+                Navigator.pushNamed(context, '/menupage');
+              },
+            ),
+          ],
         ),
       ),
     );
