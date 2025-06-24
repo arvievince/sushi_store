@@ -5,6 +5,7 @@ import 'package:sushi_store/components/button.dart';
 import 'package:sushi_store/pages/food_details_page.dart';
 import 'package:sushi_store/pages/models/food_model.dart';
 import 'package:sushi_store/pages/models/shop.dart';
+import 'package:sushi_store/pages/navbar.dart';
 import 'package:sushi_store/themeColors.dart';
 
 import '../components/food_tile.dart';
@@ -20,7 +21,6 @@ class _MenuPageState extends State<MenuPage> {
   //navigate to item details page
 
   void navigateToItemDetails(int index) {
-    
     //get the shop menu
     final shop = context.read<Shop>();
     final foodMenu = shop.foodMenu;
@@ -42,14 +42,15 @@ class _MenuPageState extends State<MenuPage> {
     final foodMenu = shop.foodMenu;
 
     return Scaffold(
+      drawer: NavBar(),
       backgroundColor: SushiTheme.sushiWhite,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: Icon(
-          Icons.menu,
-          color: SushiTheme.darkGrey,
-        ),
+        // leading: Icon(
+        //   Icons.menu,
+        //   color: SushiTheme.darkGrey,
+        // ),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
